@@ -1,7 +1,7 @@
-module FSM (clk, reset, mode, valid_in, last_in, valid_data, enable_mode0, enable_mode1, valid_out, result, done)
+module FSM (clk, reset, mode, valid_in, last_in, enable_mode0, enable_mode1, valid_out, result, done)
 input wire clk, reset;
 input wire mode, valid_in, last_in;
-output reg valid_data, enable_mode0, enable_mode1, valid_out, result, done;
+output reg enable_mode0, enable_mode1, valid_out, result, done;
 
 //values for mode
 parameter MODE_0 = 1'b0;
@@ -39,7 +39,6 @@ end
 
 always @ (posedge clk or posedge reset) begin
 	if (reset == 1'b1) begin
-		valid_data <= 1'b0;
 		enable_mode0 <= 1'b0;
 		enable_mode1 <= 1'b0;
 		valid_out <= 1'b0;
@@ -76,7 +75,6 @@ always @ (posedge clk or posedge reset) begin
 			done <= last_in;
 		end
 		default: begin
-			valid_data <= 1'b0;
 			enable_mode0 <= 1'b0;
 			enable_mode1 <= 1'b0;
 			valid_out <= 1'b0;
