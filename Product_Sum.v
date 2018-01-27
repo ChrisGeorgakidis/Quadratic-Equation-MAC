@@ -1,17 +1,18 @@
-module Product_Sum (clk, reset, last_input, in_ai, in_xi, result);
+module Product_Sum (clk, reset, enable, valid_in, done, in_ai, in_xi, result);
 
-input wire clk, reset, last_input;
+input wire clk, reset;
+input wire done, enable, valid_in;
 input wire [7:0]in_ai;
 input wire [7:0]in_xi;
-output wire [15:0]result;
+output reg [15:0]result;
 
 reg [15:0]mult_reg;
 reg [15:0]register;
 wire [15:0]mult_result;
-reg done;
+wire [15:0]result_w;
 
 assign mult_result = in_ai*in_xi;
-assign result = mult_reg + register;
+assign result_w = mult_reg + register;
 
 always @ (posedge clk or posedge reset) begin
 	if (reset == 1'b1) begin
@@ -19,26 +20,23 @@ always @ (posedge clk or posedge reset) begin
 		mult_reg <= 16'b0;
 	end
 	else begin
-		mult_reg <= mult_result;
-		if (done == 0) begin
-			register <= result;
+		if (enable == 1) begin
+			if (valid_in == 1) begin
+				mult_reg <= mult_result;
+			end
+			else begin
+				mult_reg <= 16'b0;
+			end
+			if (done == 0) begin
+				register <= result_w;
+			end
+			else begin
+				register <= 16'b0;
+			end
+			result <= result_w;
 		end
 		else begin
 			register <= 16'b0;
-		end
-	end
-end
-
-always @ ( posedge clk or posedge reset ) begin
-	if (reset == 1) begin
-		done <= 0;
-	end
-	else begin
-		if (last_input == 1'b1) begin
-			done <= 1;
-		end
-		else begin
-			done <= 0;
 		end
 	end
 end
