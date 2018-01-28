@@ -1,11 +1,11 @@
 module QE_M_tb ();
 
-wire clk, reset;
-wire valid_in, last_input, mode;
-wire [7:0]in_a;
-wire [7:0]in_x;
-wire [7:0]in_b;
-wire [7:0]in_c;
+reg clk, reset;
+reg valid_in, last_input, mode;
+reg [7:0]in_a;
+reg [7:0]in_x;
+reg [7:0]in_b;
+reg [7:0]in_c;
 
 wire valid_out;
 wire [15:0]result;
@@ -28,6 +28,7 @@ initial begin
   clk <= 1'b1;
   reset <= 1'b1;
   last_input <= 1'b0;
+  mode <= 1'b0;
   #20 reset <= 1'b0;
 
   //51265 valid
@@ -49,7 +50,7 @@ initial begin
   in_a <= 8'd100;
   in_b <= 8'd5;
   in_c <= 8'd3;
-  in_x <= 8'd0;
+  in_x <= 8'd9;
 
   //800 invalid
   #20 mode <= 1'b1;
@@ -70,5 +71,7 @@ initial begin
 end
 
 always begin
-  #2.5  clk <= clk;
+  #2.5 clk <= ~clk;
 end
+
+endmodule

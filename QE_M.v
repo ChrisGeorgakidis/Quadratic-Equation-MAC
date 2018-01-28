@@ -41,7 +41,7 @@ FSM FSM (
 	.reset 			(reset),
 	.mode 			(mode),
 	.valid_in 		(valid_in),
-	.last_in		(last_in),
+	.last_in		(last_input),
 	.enable_mode0 	(enable_mode0),
 	.enable_mode1 	(enable_mode1),
 	.valid_out 		(valid_out),
