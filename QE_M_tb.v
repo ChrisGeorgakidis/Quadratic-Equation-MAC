@@ -11,7 +11,8 @@ reg [7:0]in_c;
 reg [15:0]expected_result;
 reg expected_valid_out;
 
-reg [31:0]vectornum, [31:0]errors;  //bookeeping variables
+reg [31:0]vectornum;
+reg [31:0]errors;  //bookeeping variables
 reg [51:0] testvectors[10000:0];      //array of testvectors
 
 
@@ -82,7 +83,10 @@ QE_M QE_M (
 
 //generate clk
 always begin
-  clk <= 1'b1;  #2.5 clk <= ~clk; #2.5; //5ns clk period
+    //5ns clk period
+    clk <= 1'b1;
+    #2.5 clk <= ~clk;
+    #2.5;
 end
 
 //at start of test, load vectors and pulse reset
@@ -101,16 +105,17 @@ end
 
 //check results on falling edge of clk
 always @ (negedge clk) begin
-  if (~reset) begin
-    if (result != expected_result) begin
-      $display("Error: inputs = %d, {a, b, c}");
-      $display("  outputs = %d (%d exp)", result, expected_result);
-      errors <= errors + 1;
-    end
-    vectornum = vectornum + 1;
-    if (testvectors[vectornum] == 53'bx) begin
-      $display("%d tests completed with %d errors", vectornum, errors);
-      $finish;  //End Simulation
+    if (~reset) begin
+        if (result != expected_result) begin
+            $display("Error: inputs = %d", {valid_in, last_input, mode, in_a, in_b, in_c, in_x, expected_result, expected_valid_out});
+            $display("  outputs = %d (%d exp)", result, expected_result);
+            errors <= errors + 1;
+        end
+        vectornum = vectornum + 1;
+        if (testvectors[vectornum] == 53'bx) begin
+            $display("%d tests completed with %d errors", vectornum, errors);
+            $finish;  //End Simulation
+        end
     end
 end
 
