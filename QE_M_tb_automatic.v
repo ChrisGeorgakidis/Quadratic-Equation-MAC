@@ -1,4 +1,4 @@
-module QE_M_tb ();
+module QE_M_tb_automatic ();
 
 reg clk, reset;
 
@@ -42,9 +42,10 @@ QE_M QE_M (
 initial begin
 	clk <= 1'b1;
 	reset <= 1'b1;
-
+	mode <= 1'b0;
+	valid_in <= 1'b0;
+	last_input <= 1'b0;
 	#20 reset <= 1'b0;
-
 	for (i=0; i<6; i=i+1) begin
 	case(i)
 		0: begin
