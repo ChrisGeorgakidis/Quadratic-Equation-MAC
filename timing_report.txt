@@ -1,0 +1,472 @@
+================================================================================
+ Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 5.5 ns HIGH 50%;
+ For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+  1282 paths analyzed, 246 endpoints analyzed, 0 failing endpoints
+  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+  Minimum period is   5.233ns.
+ --------------------------------------------------------------------------------
+
+ Paths for end point Quadratic_Equation/result_3 (SLICE_X6Y32.DX), 25 paths
+ --------------------------------------------------------------------------------
+ Slack (setup path):     0.267ns (requirement - (data path - clock path skew + uncertainty))
+   Source:               Quadratic_Equation/R_5 (FF)
+   Destination:          Quadratic_Equation/result_3 (FF)
+   Requirement:          5.500ns
+   Data Path Delay:      5.193ns (Levels of Logic = 1)
+   Clock Path Skew:      -0.005ns (0.508 - 0.513)
+   Source Clock:         clk_BUFGP rising at 0.000ns
+   Destination Clock:    clk_BUFGP rising at 5.500ns
+   Clock Uncertainty:    0.035ns
+
+   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+     Total System Jitter (TSJ):  0.070ns
+     Total Input Jitter (TIJ):   0.000ns
+     Discrete Jitter (DJ):       0.000ns
+     Phase Error (PE):           0.000ns
+
+   Maximum Data Path: Quadratic_Equation/R_5 to Quadratic_Equation/result_3
+     Location             Delay type         Delay(ns)  Physical Resource
+                                                        Logical Resource(s)
+     -------------------------------------------------  -------------------
+     SLICE_X11Y26.BQ      Tcko                  0.375   Quadratic_Equation/R<7>
+                                                        Quadratic_Equation/R_5
+     DSP48_X0Y11.A5       net (fanout=1)        0.705   Quadratic_Equation/R<5>
+     DSP48_X0Y11.P3       Tdspdo_AP_M           3.068   Quadratic_Equation/Maddsub_result_mult0001
+                                                        Quadratic_Equation/Maddsub_result_mult0001
+     SLICE_X6Y32.DX       net (fanout=1)        1.047   Quadratic_Equation/result_add0000<3>
+     SLICE_X6Y32.CLK      Tdick                -0.002   Quadratic_Equation/result<3>
+                                                        Quadratic_Equation/result_3
+     -------------------------------------------------  ---------------------------
+     Total                                      5.193ns (3.441ns logic, 1.752ns route)
+                                                        (66.3% logic, 33.7% route)
+
+ --------------------------------------------------------------------------------
+ Slack (setup path):     0.414ns (requirement - (data path - clock path skew + uncertainty))
+   Source:               Quadratic_Equation/R_9 (FF)
+   Destination:          Quadratic_Equation/result_3 (FF)
+   Requirement:          5.500ns
+   Data Path Delay:      5.042ns (Levels of Logic = 1)
+   Clock Path Skew:      -0.009ns (0.508 - 0.517)
+   Source Clock:         clk_BUFGP rising at 0.000ns
+   Destination Clock:    clk_BUFGP rising at 5.500ns
+   Clock Uncertainty:    0.035ns
+
+   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+     Total System Jitter (TSJ):  0.070ns
+     Total Input Jitter (TIJ):   0.000ns
+     Discrete Jitter (DJ):       0.000ns
+     Phase Error (PE):           0.000ns
+
+   Maximum Data Path: Quadratic_Equation/R_9 to Quadratic_Equation/result_3
+     Location             Delay type         Delay(ns)  Physical Resource
+                                                        Logical Resource(s)
+     -------------------------------------------------  -------------------
+     SLICE_X11Y25.BQ      Tcko                  0.375   Quadratic_Equation/R<11>
+                                                        Quadratic_Equation/R_9
+     DSP48_X0Y11.A9       net (fanout=1)        0.554   Quadratic_Equation/R<9>
+     DSP48_X0Y11.P3       Tdspdo_AP_M           3.068   Quadratic_Equation/Maddsub_result_mult0001
+                                                        Quadratic_Equation/Maddsub_result_mult0001
+     SLICE_X6Y32.DX       net (fanout=1)        1.047   Quadratic_Equation/result_add0000<3>
+     SLICE_X6Y32.CLK      Tdick                -0.002   Quadratic_Equation/result<3>
+                                                        Quadratic_Equation/result_3
+     -------------------------------------------------  ---------------------------
+     Total                                      5.042ns (3.441ns logic, 1.601ns route)
+                                                        (68.2% logic, 31.8% route)
+
+ --------------------------------------------------------------------------------
+ Slack (setup path):     0.424ns (requirement - (data path - clock path skew + uncertainty))
+   Source:               Quadratic_Equation/R_10 (FF)
+   Destination:          Quadratic_Equation/result_3 (FF)
+   Requirement:          5.500ns
+   Data Path Delay:      5.032ns (Levels of Logic = 1)
+   Clock Path Skew:      -0.009ns (0.508 - 0.517)
+   Source Clock:         clk_BUFGP rising at 0.000ns
+   Destination Clock:    clk_BUFGP rising at 5.500ns
+   Clock Uncertainty:    0.035ns
+
+   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+     Total System Jitter (TSJ):  0.070ns
+     Total Input Jitter (TIJ):   0.000ns
+     Discrete Jitter (DJ):       0.000ns
+     Phase Error (PE):           0.000ns
+
+   Maximum Data Path: Quadratic_Equation/R_10 to Quadratic_Equation/result_3
+     Location             Delay type         Delay(ns)  Physical Resource
+                                                        Logical Resource(s)
+     -------------------------------------------------  -------------------
+     SLICE_X11Y25.CQ      Tcko                  0.375   Quadratic_Equation/R<11>
+                                                        Quadratic_Equation/R_10
+     DSP48_X0Y11.A10      net (fanout=1)        0.544   Quadratic_Equation/R<10>
+     DSP48_X0Y11.P3       Tdspdo_AP_M           3.068   Quadratic_Equation/Maddsub_result_mult0001
+                                                        Quadratic_Equation/Maddsub_result_mult0001
+     SLICE_X6Y32.DX       net (fanout=1)        1.047   Quadratic_Equation/result_add0000<3>
+     SLICE_X6Y32.CLK      Tdick                -0.002   Quadratic_Equation/result<3>
+                                                        Quadratic_Equation/result_3
+     -------------------------------------------------  ---------------------------
+     Total                                      5.032ns (3.441ns logic, 1.591ns route)
+                                                        (68.4% logic, 31.6% route)
+
+ --------------------------------------------------------------------------------
+
+ Paths for end point Quadratic_Equation/result_6 (SLICE_X6Y30.CX), 25 paths
+ --------------------------------------------------------------------------------
+ Slack (setup path):     0.297ns (requirement - (data path - clock path skew + uncertainty))
+   Source:               Quadratic_Equation/R_5 (FF)
+   Destination:          Quadratic_Equation/result_6 (FF)
+   Requirement:          5.500ns
+   Data Path Delay:      5.153ns (Levels of Logic = 1)
+   Clock Path Skew:      -0.015ns (0.498 - 0.513)
+   Source Clock:         clk_BUFGP rising at 0.000ns
+   Destination Clock:    clk_BUFGP rising at 5.500ns
+   Clock Uncertainty:    0.035ns
+
+   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+     Total System Jitter (TSJ):  0.070ns
+     Total Input Jitter (TIJ):   0.000ns
+     Discrete Jitter (DJ):       0.000ns
+     Phase Error (PE):           0.000ns
+
+   Maximum Data Path: Quadratic_Equation/R_5 to Quadratic_Equation/result_6
+     Location             Delay type         Delay(ns)  Physical Resource
+                                                        Logical Resource(s)
+     -------------------------------------------------  -------------------
+     SLICE_X11Y26.BQ      Tcko                  0.375   Quadratic_Equation/R<7>
+                                                        Quadratic_Equation/R_5
+     DSP48_X0Y11.A5       net (fanout=1)        0.705   Quadratic_Equation/R<5>
+     DSP48_X0Y11.P6       Tdspdo_AP_M           3.068   Quadratic_Equation/Maddsub_result_mult0001
+                                                        Quadratic_Equation/Maddsub_result_mult0001
+     SLICE_X6Y30.CX       net (fanout=1)        1.005   Quadratic_Equation/result_add0000<6>
+     SLICE_X6Y30.CLK      Tdick                 0.000   Quadratic_Equation/result<7>
+                                                        Quadratic_Equation/result_6
+     -------------------------------------------------  ---------------------------
+     Total                                      5.153ns (3.443ns logic, 1.710ns route)
+                                                        (66.8% logic, 33.2% route)
+
+ --------------------------------------------------------------------------------
+ Slack (setup path):     0.444ns (requirement - (data path - clock path skew + uncertainty))
+   Source:               Quadratic_Equation/R_9 (FF)
+   Destination:          Quadratic_Equation/result_6 (FF)
+   Requirement:          5.500ns
+   Data Path Delay:      5.002ns (Levels of Logic = 1)
+   Clock Path Skew:      -0.019ns (0.498 - 0.517)
+   Source Clock:         clk_BUFGP rising at 0.000ns
+   Destination Clock:    clk_BUFGP rising at 5.500ns
+   Clock Uncertainty:    0.035ns
+
+   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+     Total System Jitter (TSJ):  0.070ns
+     Total Input Jitter (TIJ):   0.000ns
+     Discrete Jitter (DJ):       0.000ns
+     Phase Error (PE):           0.000ns
+
+   Maximum Data Path: Quadratic_Equation/R_9 to Quadratic_Equation/result_6
+     Location             Delay type         Delay(ns)  Physical Resource
+                                                        Logical Resource(s)
+     -------------------------------------------------  -------------------
+     SLICE_X11Y25.BQ      Tcko                  0.375   Quadratic_Equation/R<11>
+                                                        Quadratic_Equation/R_9
+     DSP48_X0Y11.A9       net (fanout=1)        0.554   Quadratic_Equation/R<9>
+     DSP48_X0Y11.P6       Tdspdo_AP_M           3.068   Quadratic_Equation/Maddsub_result_mult0001
+                                                        Quadratic_Equation/Maddsub_result_mult0001
+     SLICE_X6Y30.CX       net (fanout=1)        1.005   Quadratic_Equation/result_add0000<6>
+     SLICE_X6Y30.CLK      Tdick                 0.000   Quadratic_Equation/result<7>
+                                                        Quadratic_Equation/result_6
+     -------------------------------------------------  ---------------------------
+     Total                                      5.002ns (3.443ns logic, 1.559ns route)
+                                                        (68.8% logic, 31.2% route)
+
+ --------------------------------------------------------------------------------
+ Slack (setup path):     0.454ns (requirement - (data path - clock path skew + uncertainty))
+   Source:               Quadratic_Equation/R_10 (FF)
+   Destination:          Quadratic_Equation/result_6 (FF)
+   Requirement:          5.500ns
+   Data Path Delay:      4.992ns (Levels of Logic = 1)
+   Clock Path Skew:      -0.019ns (0.498 - 0.517)
+   Source Clock:         clk_BUFGP rising at 0.000ns
+   Destination Clock:    clk_BUFGP rising at 5.500ns
+   Clock Uncertainty:    0.035ns
+
+   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+     Total System Jitter (TSJ):  0.070ns
+     Total Input Jitter (TIJ):   0.000ns
+     Discrete Jitter (DJ):       0.000ns
+     Phase Error (PE):           0.000ns
+
+   Maximum Data Path: Quadratic_Equation/R_10 to Quadratic_Equation/result_6
+     Location             Delay type         Delay(ns)  Physical Resource
+                                                        Logical Resource(s)
+     -------------------------------------------------  -------------------
+     SLICE_X11Y25.CQ      Tcko                  0.375   Quadratic_Equation/R<11>
+                                                        Quadratic_Equation/R_10
+     DSP48_X0Y11.A10      net (fanout=1)        0.544   Quadratic_Equation/R<10>
+     DSP48_X0Y11.P6       Tdspdo_AP_M           3.068   Quadratic_Equation/Maddsub_result_mult0001
+                                                        Quadratic_Equation/Maddsub_result_mult0001
+     SLICE_X6Y30.CX       net (fanout=1)        1.005   Quadratic_Equation/result_add0000<6>
+     SLICE_X6Y30.CLK      Tdick                 0.000   Quadratic_Equation/result<7>
+                                                        Quadratic_Equation/result_6
+     -------------------------------------------------  ---------------------------
+     Total                                      4.992ns (3.443ns logic, 1.549ns route)
+                                                        (69.0% logic, 31.0% route)
+
+ --------------------------------------------------------------------------------
+
+ Paths for end point Quadratic_Equation/result_2 (SLICE_X6Y32.CX), 25 paths
+ --------------------------------------------------------------------------------
+ Slack (setup path):     0.424ns (requirement - (data path - clock path skew + uncertainty))
+   Source:               Quadratic_Equation/R_5 (FF)
+   Destination:          Quadratic_Equation/result_2 (FF)
+   Requirement:          5.500ns
+   Data Path Delay:      5.036ns (Levels of Logic = 1)
+   Clock Path Skew:      -0.005ns (0.508 - 0.513)
+   Source Clock:         clk_BUFGP rising at 0.000ns
+   Destination Clock:    clk_BUFGP rising at 5.500ns
+   Clock Uncertainty:    0.035ns
+
+   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+     Total System Jitter (TSJ):  0.070ns
+     Total Input Jitter (TIJ):   0.000ns
+     Discrete Jitter (DJ):       0.000ns
+     Phase Error (PE):           0.000ns
+
+   Maximum Data Path: Quadratic_Equation/R_5 to Quadratic_Equation/result_2
+     Location             Delay type         Delay(ns)  Physical Resource
+                                                        Logical Resource(s)
+     -------------------------------------------------  -------------------
+     SLICE_X11Y26.BQ      Tcko                  0.375   Quadratic_Equation/R<7>
+                                                        Quadratic_Equation/R_5
+     DSP48_X0Y11.A5       net (fanout=1)        0.705   Quadratic_Equation/R<5>
+     DSP48_X0Y11.P2       Tdspdo_AP_M           3.068   Quadratic_Equation/Maddsub_result_mult0001
+                                                        Quadratic_Equation/Maddsub_result_mult0001
+     SLICE_X6Y32.CX       net (fanout=1)        0.888   Quadratic_Equation/result_add0000<2>
+     SLICE_X6Y32.CLK      Tdick                 0.000   Quadratic_Equation/result<3>
+                                                        Quadratic_Equation/result_2
+     -------------------------------------------------  ---------------------------
+     Total                                      5.036ns (3.443ns logic, 1.593ns route)
+                                                        (68.4% logic, 31.6% route)
+
+ --------------------------------------------------------------------------------
+ Slack (setup path):     0.571ns (requirement - (data path - clock path skew + uncertainty))
+   Source:               Quadratic_Equation/R_9 (FF)
+   Destination:          Quadratic_Equation/result_2 (FF)
+   Requirement:          5.500ns
+   Data Path Delay:      4.885ns (Levels of Logic = 1)
+   Clock Path Skew:      -0.009ns (0.508 - 0.517)
+   Source Clock:         clk_BUFGP rising at 0.000ns
+   Destination Clock:    clk_BUFGP rising at 5.500ns
+   Clock Uncertainty:    0.035ns
+
+   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+     Total System Jitter (TSJ):  0.070ns
+     Total Input Jitter (TIJ):   0.000ns
+     Discrete Jitter (DJ):       0.000ns
+     Phase Error (PE):           0.000ns
+
+   Maximum Data Path: Quadratic_Equation/R_9 to Quadratic_Equation/result_2
+     Location             Delay type         Delay(ns)  Physical Resource
+                                                        Logical Resource(s)
+     -------------------------------------------------  -------------------
+     SLICE_X11Y25.BQ      Tcko                  0.375   Quadratic_Equation/R<11>
+                                                        Quadratic_Equation/R_9
+     DSP48_X0Y11.A9       net (fanout=1)        0.554   Quadratic_Equation/R<9>
+     DSP48_X0Y11.P2       Tdspdo_AP_M           3.068   Quadratic_Equation/Maddsub_result_mult0001
+                                                        Quadratic_Equation/Maddsub_result_mult0001
+     SLICE_X6Y32.CX       net (fanout=1)        0.888   Quadratic_Equation/result_add0000<2>
+     SLICE_X6Y32.CLK      Tdick                 0.000   Quadratic_Equation/result<3>
+                                                        Quadratic_Equation/result_2
+     -------------------------------------------------  ---------------------------
+     Total                                      4.885ns (3.443ns logic, 1.442ns route)
+                                                        (70.5% logic, 29.5% route)
+
+ --------------------------------------------------------------------------------
+ Slack (setup path):     0.581ns (requirement - (data path - clock path skew + uncertainty))
+   Source:               Quadratic_Equation/R_10 (FF)
+   Destination:          Quadratic_Equation/result_2 (FF)
+   Requirement:          5.500ns
+   Data Path Delay:      4.875ns (Levels of Logic = 1)
+   Clock Path Skew:      -0.009ns (0.508 - 0.517)
+   Source Clock:         clk_BUFGP rising at 0.000ns
+   Destination Clock:    clk_BUFGP rising at 5.500ns
+   Clock Uncertainty:    0.035ns
+
+   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+     Total System Jitter (TSJ):  0.070ns
+     Total Input Jitter (TIJ):   0.000ns
+     Discrete Jitter (DJ):       0.000ns
+     Phase Error (PE):           0.000ns
+
+   Maximum Data Path: Quadratic_Equation/R_10 to Quadratic_Equation/result_2
+     Location             Delay type         Delay(ns)  Physical Resource
+                                                        Logical Resource(s)
+     -------------------------------------------------  -------------------
+     SLICE_X11Y25.CQ      Tcko                  0.375   Quadratic_Equation/R<11>
+                                                        Quadratic_Equation/R_10
+     DSP48_X0Y11.A10      net (fanout=1)        0.544   Quadratic_Equation/R<10>
+     DSP48_X0Y11.P2       Tdspdo_AP_M           3.068   Quadratic_Equation/Maddsub_result_mult0001
+                                                        Quadratic_Equation/Maddsub_result_mult0001
+     SLICE_X6Y32.CX       net (fanout=1)        0.888   Quadratic_Equation/result_add0000<2>
+     SLICE_X6Y32.CLK      Tdick                 0.000   Quadratic_Equation/result<3>
+                                                        Quadratic_Equation/result_2
+     -------------------------------------------------  ---------------------------
+     Total                                      4.875ns (3.443ns logic, 1.432ns route)
+                                                        (70.6% logic, 29.4% route)
+
+ --------------------------------------------------------------------------------
+
+ Hold Paths: TS_clk = PERIOD TIMEGRP "clk" 5.5 ns HIGH 50%;
+ --------------------------------------------------------------------------------
+
+ Paths for end point FSM/valid_out (SLICE_X26Y28.C6), 1 path
+ --------------------------------------------------------------------------------
+ Slack (hold path):      0.413ns (requirement - (clock path skew + uncertainty - data path))
+   Source:               FSM/done (FF)
+   Destination:          FSM/valid_out (FF)
+   Requirement:          0.000ns
+   Data Path Delay:      0.461ns (Levels of Logic = 1)
+   Clock Path Skew:      0.048ns (0.459 - 0.411)
+   Source Clock:         clk_BUFGP rising at 5.500ns
+   Destination Clock:    clk_BUFGP rising at 5.500ns
+   Clock Uncertainty:    0.000ns
+
+   Minimum Data Path: FSM/done to FSM/valid_out
+     Location             Delay type         Delay(ns)  Physical Resource
+                                                        Logical Resource(s)
+     -------------------------------------------------  -------------------
+     SLICE_X24Y28.DQ      Tcko                  0.364   FSM/done
+                                                        FSM/done
+     SLICE_X26Y28.C6      net (fanout=17)       0.251   FSM/done
+     SLICE_X26Y28.CLK     Tah         (-Th)     0.154   FSM/valid_out
+                                                        FSM/valid_out_mux00001
+                                                        FSM/valid_out
+     -------------------------------------------------  ---------------------------
+     Total                                      0.461ns (0.210ns logic, 0.251ns route)
+                                                        (45.6% logic, 54.4% route)
+
+ --------------------------------------------------------------------------------
+
+ Paths for end point FSM/valid_out (SLICE_X26Y28.C5), 1 path
+ --------------------------------------------------------------------------------
+ Slack (hold path):      0.463ns (requirement - (clock path skew + uncertainty - data path))
+   Source:               FSM/old_valid (FF)
+   Destination:          FSM/valid_out (FF)
+   Requirement:          0.000ns
+   Data Path Delay:      0.494ns (Levels of Logic = 1)
+   Clock Path Skew:      0.031ns (0.136 - 0.105)
+   Source Clock:         clk_BUFGP rising at 5.500ns
+   Destination Clock:    clk_BUFGP rising at 5.500ns
+   Clock Uncertainty:    0.000ns
+
+   Minimum Data Path: FSM/old_valid to FSM/valid_out
+     Location             Delay type         Delay(ns)  Physical Resource
+                                                        Logical Resource(s)
+     -------------------------------------------------  -------------------
+     SLICE_X27Y28.CQ      Tcko                  0.345   FSM/old_valid
+                                                        FSM/old_valid
+     SLICE_X26Y28.C5      net (fanout=1)        0.303   FSM/old_valid
+     SLICE_X26Y28.CLK     Tah         (-Th)     0.154   FSM/valid_out
+                                                        FSM/valid_out_mux00001
+                                                        FSM/valid_out
+     -------------------------------------------------  ---------------------------
+     Total                                      0.494ns (0.191ns logic, 0.303ns route)
+                                                        (38.7% logic, 61.3% route)
+
+ --------------------------------------------------------------------------------
+
+ Paths for end point Product_Sum/result_3 (SLICE_X8Y29.D6), 1 path
+ --------------------------------------------------------------------------------
+ Slack (hold path):      0.507ns (requirement - (clock path skew + uncertainty - data path))
+   Source:               Product_Sum/register_3 (FF)
+   Destination:          Product_Sum/result_3 (FF)
+   Requirement:          0.000ns
+   Data Path Delay:      0.515ns (Levels of Logic = 1)
+   Clock Path Skew:      0.008ns (0.107 - 0.099)
+   Source Clock:         clk_BUFGP rising at 5.500ns
+   Destination Clock:    clk_BUFGP rising at 5.500ns
+   Clock Uncertainty:    0.000ns
+
+   Minimum Data Path: Product_Sum/register_3 to Product_Sum/result_3
+     Location             Delay type         Delay(ns)  Physical Resource
+                                                        Logical Resource(s)
+     -------------------------------------------------  -------------------
+     SLICE_X9Y29.DQ       Tcko                  0.345   Product_Sum/register<3>
+                                                        Product_Sum/register_3
+     SLICE_X8Y29.D6       net (fanout=1)        0.238   Product_Sum/register<3>
+     SLICE_X8Y29.CLK      Tah         (-Th)     0.068   Product_Sum/result<3>
+                                                        Product_Sum/Madd_result_w_add0000_lut<3>
+                                                        Product_Sum/Madd_result_w_add0000_cy<3>
+                                                        Product_Sum/result_3
+     -------------------------------------------------  ---------------------------
+     Total                                      0.515ns (0.277ns logic, 0.238ns route)
+                                                        (53.8% logic, 46.2% route)
+
+ --------------------------------------------------------------------------------
+
+ Component Switching Limit Checks: TS_clk = PERIOD TIMEGRP "clk" 5.5 ns HIGH 50%;
+ --------------------------------------------------------------------------------
+ Slack: 4.002ns (period - min period limit)
+   Period: 5.500ns
+   Min period limit: 1.498ns (667.557MHz) (Tbgper_I)
+   Physical resource: clk_BUFGP/BUFG/I0
+   Logical resource: clk_BUFGP/BUFG/I0
+   Location pin: BUFGCTRL_X0Y0.I0
+   Clock network: clk_BUFGP/IBUFG
+ --------------------------------------------------------------------------------
+ Slack: 4.446ns (period - (min low pulse limit / (low pulse / period)))
+   Period: 5.500ns
+   Low pulse: 2.750ns
+   Low pulse limit: 0.527ns (Trpw)
+   Physical resource: Quadratic_Equation/result<7>/SR
+   Logical resource: Quadratic_Equation/result_4/SR
+   Location pin: SLICE_X6Y30.SR
+   Clock network: reset_IBUF
+ --------------------------------------------------------------------------------
+ Slack: 4.446ns (period - (min high pulse limit / (high pulse / period)))
+   Period: 5.500ns
+   High pulse: 2.750ns
+   High pulse limit: 0.527ns (Trpw)
+   Physical resource: Quadratic_Equation/result<7>/SR
+   Logical resource: Quadratic_Equation/result_4/SR
+   Location pin: SLICE_X6Y30.SR
+   Clock network: reset_IBUF
+ --------------------------------------------------------------------------------
+
+
+ All constraints were met.
+
+
+ Data Sheet report:
+ -----------------
+ All values displayed in nanoseconds (ns)
+
+ Clock to Setup on destination clock clk
+ ---------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+ ---------------+---------+---------+---------+---------+
+ clk            |    5.233|         |         |         |
+ ---------------+---------+---------+---------+---------+
+
+
+ Timing summary:
+ ---------------
+
+ Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+ Constraints cover 1282 paths, 0 nets, and 217 connections
+
+ Design statistics:
+    Minimum period:   5.233ns{1}   (Maximum frequency: 191.095MHz)
+
+
+ ------------------------------------Footnotes-----------------------------------
+ 1)  The minimum period statistic assumes all single cycle delays.
+
+ Analysis completed Tue Feb 06 10:32:48 2018
+ --------------------------------------------------------------------------------
+
+ Trace Settings:
+ -------------------------
+ Trace Settings
+
+ Peak Memory Usage: 375 MB
+
+  
